@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>SoundMind</title>
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <h1 class="header__logo"><img src="src/images/logo.png" alt="SoundMind" title="SoundMind"></h1>
+        <nav class="header__nav" aria-label="widescreen navigation">
+            <ul class="header__list list--left">
+                <li class="list__item">
+                    <a href="#" class="list__link">About</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Our Science</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Community</a>
+                </li>
+            </ul>
+
+            <ul class="header__list list--right">
+                <li class="list__item list--left">
+                    <span>
+                        <a href="#" class="list__link">For Students</a>
+                    </span>
+                </li>
+                <button class="button--generic header__button">
+                    <a href="#" class="list__link">
+                        <span>TRY IT FOR FREE!</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="Component_1_1" data-name="Component 1 – 1" width="27" height="27" viewBox="0 0 27 27">
+                            <defs>
+                                <filter id="Ellipse_17" x="0" y="0" width="27" height="27" filterUnits="userSpaceOnUse">
+                                    <feOffset dx="-3" dy="3" input="SourceAlpha" />
+                                    <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                    <feFlood flood-color="#7054ea" flood-opacity="0.302" result="color" />
+                                    <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                                    <feComposite operator="in" in="color" />
+                                    <feComposite operator="in" in2="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g data-type="innerShadowGroup">
+                                <circle id="Ellipse_17-2" data-name="Ellipse 17" cx="13.5" cy="13.5" r="13.5"
+                                    fill="#200173" />
+                                <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_17)">
+                                    <circle id="Ellipse_17-3" data-name="Ellipse 17" cx="13.5" cy="13.5" r="13.5"
+                                        fill="#fff" />
+                                </g>
+                            </g>
+                            <g id="Group_23" data-name="Group 23" transform="translate(-436 -524)">
+                                <line id="Line_1" data-name="Line 1" x2="13" transform="translate(441.5 537.582)"
+                                    fill="none" stroke="#e5ecff" stroke-linecap="round" stroke-width="1" />
+                                <path id="Path_6" data-name="Path 6" d="M2498.748,532.737l3.938,4.981-3.938,4.709"
+                                    transform="translate(-2048)" fill="none" stroke="#e5ecff" stroke-linecap="round"
+                                    stroke-width="1" />
+                            </g>
+                        </svg>
+                    </a>
+                </button>
+                </li>
+                <li class="list__item hamburger">
+                    <button class="hamburger__button" onclick=toggleOverlay()>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay">
+            <div class="overlay__header">
+                <h1 class="header__logo logo--overlay"><img src="src/images/logo.png" alt="SoundMind" title="SoundMind">
+                </h1>
+
+                <div class="hamburger hamburger--overlay">
+                    <button class="hamburger__button hamburger__button--overlay" onclick=toggleOverlay()>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <nav aria-label="smartphone navigation">
+
+            </nav>
+        </div>
+    </header>
+    <main>
+    </main>
+    <script src="./src/scripts/script.js"></script>
+</body>
+
+</html>
+
+<!-- <section>
+            <header>
+                <h1>PUT<span>SOUND</span> AT THE <img src="./src/images/banner-team-new-img1.png" alt="">OF YOUR MIND
+                </h1>
+                <div>
+                    <button><a href="#">TRY IT FOR FREE!</a></button>
+                    <button>
+                        <img src="./src/icons/btn-chat-icon.svg" alt="">
+                        <a href="#">TRY IF FOR SCHOOLS</a>
+                    </button>
+                </div>
+            </header>
+            <button>
+                <a href="#">
+                    <img src="" alt="">
+                    <span></span>
+                    <span></span>
+                </a>
+            </button>
+        </section>-->
