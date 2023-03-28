@@ -3,7 +3,9 @@
     box-sizing: border-box;
     --background-default: #200173;
     --overlay-color: #051439;
+    --purple-light: #6f42c1;
     --nunito-default: 'Nunito', sans-serif;
+
 }
 
 html,
@@ -13,19 +15,57 @@ body {
     font-family: var(--nunito-default);
 }
 
+/* Links */
+.link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.link:hover {
+    transition: 0.5s;
+    color: #e83e8c;
+}
+
 /* Generic Button */
 .button--generic {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     background: white;
     font-size: 15px;
-    border-radius: 50px;
-    box-shadow: inset 0 0 16px #7c7c7c;
+    border-radius: 30px;
+    border: none;
+    box-shadow: inset 4px 4px 12px #c2c2c2;
     color: var(--background-default);
-    min-width: 200px;
-    width: 230px;
+    width: 13.8rem;
+    height: 3.5rem;
     font-weight: 500;
-    padding: 15px 5px 15px 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.button--generic::after {
+    padding-top: 4px;
+    margin-right: -10px;
+    content: url('../icons/arrow-icon.svg');
+}
+
+.button--generic:hover {
+    background-color: var(--purple-light);
+    transition: 0.5s ease-in-out;
+    box-shadow: inset 4px 4px 12px #471b99;
+    color: white;
+    cursor: pointer;
+}
+
+.button--generic:hover::after {
+    padding-top: 4px;
+    content: url('../icons/btn-arrow-hover.svg');
+}
+
+.button--generic:hover a {
+    color: white;
 }
 
 .button--generic a {
@@ -43,10 +83,11 @@ body {
 
 /* Page Header Base*/
 .header-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 23px 50px;
+    padding: 25px 35px 23px 50px;
     gap: 30px;
     font-size: 16px;
     transition: 0.5s;
@@ -56,7 +97,7 @@ body {
     padding: 0;
     text-align: center;
     min-width: 200px;
-    width: 300px;
+    width: 290px;
 }
 
 .header__logo img {
@@ -64,6 +105,7 @@ body {
     image-rendering: optimizeQuality;
 }
 
+/* page header nav list */
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -85,11 +127,65 @@ body {
     list-style-type: none;
 }
 
-.list__link {
-    color: white;
-    text-decoration: none;
+.list--right {
+    gap: 35px;
 }
 
+/* Hover menu*/
+.hover-menu {
+    position: absolute;
+    background-color: var(--background-default);
+    width: 100dvw;
+    margin-top: 24px;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 8rem;
+    padding: 3rem;
+}
+
+.hover-menu__section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 24px;
+}
+
+.hover-menu__image-container {
+    width: 22rem;
+}
+
+.hover-menu__image-container img {
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.menu__section--row {
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.menu__section-title {
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+.menu__section-title--link img {
+    margin-right: 1rem;
+}
+
+.menu__section-paragraph {
+    margin-bottom: 2rem;
+    font-size: 16px;
+}
+
+.menu__arrow-link {
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-left: 0.5rem;
+}
+
+/*page header hamburger*/
 .hamburger__button {
     display: none;
     position: relative;
@@ -130,7 +226,7 @@ body {
     height: 100%;
     background-color: var(--overlay-color);
     z-index: 1;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .overlay__header {
@@ -154,15 +250,22 @@ body {
 
 .overlay--active {
     left: 0%;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 /* Page Header Medias*/
 
 @media (max-width: 1200px) {
 
+    .button--generic {
+        min-width: 128px;
+        width: 200px;
+        padding: 4px;
+        height: 3rem;
+    }
+
     .header-wrapper {
-        padding-top: 10px;
+        padding: 1rem;
         transition: 0.5s;
     }
 
@@ -172,7 +275,7 @@ body {
         justify-content: right;
     }
 
-    .list--left {
+    .wide-only {
         display: none;
     }
 
