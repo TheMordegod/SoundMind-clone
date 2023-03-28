@@ -5,7 +5,7 @@
     --overlay-color: #051439;
     --purple-light: #6f42c1;
     --nunito-default: 'Nunito', sans-serif;
-
+    letter-spacing: 0.5px;
 }
 
 html,
@@ -139,9 +139,10 @@ body {
     margin-top: 24px;
     left: 0;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 8rem;
     padding: 3rem;
+    border: 1px solid red;
 }
 
 .hover-menu__section {
@@ -183,6 +184,18 @@ body {
     height: 2.2rem;
     width: 2.2rem;
     margin-left: 0.5rem;
+}
+
+.menu__section-feature {
+    padding: 0;
+}
+
+.feature--title {
+    margin-bottom: 1.8rem;
+}
+
+.feature--item {
+    margin-bottom: 1.3rem;
 }
 
 /*page header hamburger*/
