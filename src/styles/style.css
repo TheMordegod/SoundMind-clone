@@ -8,8 +8,9 @@
     letter-spacing: 0.5px;
 }
 
-html,
 body {
+    margin: auto;
+    max-width: 2300px;
     background-color: var(--background-default);
     height: 100dvh;
     font-family: var(--nunito-default);
@@ -21,10 +22,11 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: 0.3s ease-in-out;
 }
 
 .link:hover {
-    transition: 0.5s;
+    transition: 0.3s ease-in-out;
     color: #e83e8c;
 }
 
@@ -87,7 +89,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 35px 23px 50px;
+    padding: 25px 35px 100px 50px;
     gap: 30px;
     font-size: 16px;
     transition: 0.5s;
@@ -97,7 +99,7 @@ body {
     padding: 0;
     text-align: center;
     min-width: 200px;
-    width: 290px;
+    width: 230px;
 }
 
 .header__logo img {
@@ -127,22 +129,42 @@ body {
     list-style-type: none;
 }
 
+.list__item:hover .hover-menu__trigger-area {
+    display: block;
+}
+
+.list__item:hover>.hover-menu {
+    visibility: visible;
+    margin: 24px auto;
+    opacity: 1;
+    transition: 0.5s;
+}
+
 .list--right {
     gap: 35px;
 }
 
 /* Hover menu*/
 .hover-menu {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
     position: absolute;
-    background-color: var(--background-default);
-    width: 100dvw;
-    margin-top: 24px;
+    margin: 35px auto;
     left: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 8rem;
-    padding: 3rem;
-    border: 1px solid red;
+    gap: 6rem;
+    padding: 3rem 3rem 1.5rem 3rem;
+}
+
+.hover-menu__trigger-area {
+    position: absolute;
+    display: none;
+    top: 4rem;
+    left: 0;
+    height: 100px;
+    width: 100%;
 }
 
 .hover-menu__section {
@@ -195,7 +217,11 @@ body {
 }
 
 .feature--item {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-new {
+    margin-left: 0.5rem;
 }
 
 /*page header hamburger*/
