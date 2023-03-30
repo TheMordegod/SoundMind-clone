@@ -297,14 +297,16 @@ body {
 @media (max-width: 1200px) {
 
     .button--generic {
-        min-width: 128px;
-        width: 200px;
+        width: 195px;
         height: 50px;
+        font-size: 15px;
+        padding-left: 20px;
+
+        background-repeat: no-repeat;
+        background-position: 92% 51%;
+        background-size: 22px;
     }
 
-    .button--generic::after {
-        margin-right: 0;
-    }
 
     .header-wrapper {
         padding: 15px 30px;
@@ -343,9 +345,32 @@ body {
     }
 }
 
+@media (max-width: 770px) {
+    .button--generic {
+        border-radius: inherit;
+    }
+
+    .header-wrapper {
+        padding: 0px;
+        transition: 0.5s;
+    }
+}
+
 @media (max-width: 575px) {
     .header-wrapper {
+        padding: 0;
         transition: 0.5s;
+    }
+
+
+    .button--generic {
+        width: 170px;
+        height: 50px;
+        padding: 0;
+
+        background-repeat: no-repeat;
+        background-position: 91% 51%;
+        background-size: 10%;
     }
 
     .header__button {
