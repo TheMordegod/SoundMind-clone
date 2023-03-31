@@ -255,7 +255,7 @@ body {
     height: 100%;
     background-color: var(--overlay-color);
     z-index: 1;
-    transition: 0.5s;
+    transition: 0.3s ease-in-out;
 }
 
 .overlay__header {
@@ -277,9 +277,31 @@ body {
     display: block;
 }
 
+.hamburger__button--overlay {
+    position: absolute;
+    right: 33px;
+    top: 24px;
+}
+
+.hamburger__button--overlay span:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    width: 85%;
+    transform: rotate(0);
+    height: 0;
+}
+
+.hamburger__button--overlay span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    width: 85%;
+    transform: rotate(0);
+    height: 0;
+}
+
 .overlay--active {
     left: 0%;
-    transition: 0.5s;
+    transition: 0.3s ease-in-out;
 }
 
 /* Page Header Medias*/
@@ -329,11 +351,12 @@ body {
     }
 
     .overlay__header {
+        position: relative;
         display: flex;
         justify-content: space-between;
+        align-items: start;
         padding: 26px 30px 25px 20px;
         margin: 0;
-        align-items: center;
     }
 
     .logo--overlay {
@@ -345,13 +368,31 @@ body {
         width: 100%;
     }
 
-    .hamburger--overlay {
-        display: block;
+    .hamburger__button--overlay {
+        position: absolute;
+        right: 33px;
+        top: 24px;
+    }
+
+    .hamburger__button--overlay span:nth-child(1) {
+        position: absolute;
+        top: 50%;
+        width: 85%;
+        transform: rotate(135deg);
+        height: 0;
+    }
+
+    .hamburger__button--overlay span:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        width: 85%;
+        transform: rotate(45deg);
+        height: 0;
     }
 
     .overlay--active {
         left: 0%;
-        transition: 0.5s;
+        transition: 0.3s ease-in-out;
     }
 
     .list--right {
@@ -381,6 +422,12 @@ body {
     .list--right {
         gap: 10px;
     }
+
+    .hamburger__button--overlay {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -403,5 +450,11 @@ body {
 
     .header__button {
         display: none;
+    }
+
+    .hamburger__button--overlay {
+        position: absolute;
+        right: 18px;
+        top: 16px;
     }
 }
