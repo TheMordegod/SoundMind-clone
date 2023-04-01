@@ -371,7 +371,7 @@ body {
     .hamburger__button--overlay {
         position: absolute;
         right: 33px;
-        top: 24px;
+        top: 23px;
     }
 
     .hamburger__button--overlay span:nth-child(1) {
