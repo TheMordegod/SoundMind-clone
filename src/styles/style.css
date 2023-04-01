@@ -374,25 +374,35 @@ body {
         top: 23px;
     }
 
-    .hamburger__button--overlay span:nth-child(1) {
+    .hamburger__close-button--left {
         position: absolute;
-        top: 50%;
         width: 85%;
-        transform: rotate(135deg);
         height: 0;
+        transition: 1s;
+        margin-top: 30px;
     }
 
-    .hamburger__button--overlay span:nth-child(2) {
+    .hamburger__close-button--right {
         position: absolute;
-        top: 50%;
         width: 85%;
-        transform: rotate(45deg);
         height: 0;
+        transition: 1s;
+        margin-top: 30px;
     }
 
     .overlay--active {
         left: 0%;
         transition: 0.3s ease-in-out;
+    }
+
+    .hamburger__close-button--left.build {
+        transform: rotate(135deg) !important;
+        margin-top: 0px;
+    }
+
+    .hamburger__close-button--right.build {
+        transform: rotate(225deg) !important;
+        margin-top: 0px;
     }
 
     .list--right {
