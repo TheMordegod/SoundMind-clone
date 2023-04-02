@@ -16,13 +16,14 @@
 
 <body>
     <header class="header-wrapper">
-        <a href="#">
-            <h1 class="header__logo"><img src="src/images/logo.png" alt="SoundMind" title="SoundMind"></h1>
+        <a href="#" title="SoundMind">
+            <h1 class="header__logo"><img src="src/images/logo.png" alt="SoundMind"></h1>
         </a>
+
         <nav class="header__nav" aria-label="widescreen navigation">
             <ul class="header__list list--left wide-only">
                 <li class="list__item list__item--hover">
-                    <a href="#" class="link">About</a>
+                    <a href="#" class="link" title="About">About</a>
                     <div class="hover-menu__trigger-area">
 
                     </div>
@@ -101,10 +102,10 @@
                     </div>
                 </li>
                 <li class="list__item">
-                    <a href="#" class="link">Our Science</a>
+                    <a href="#" class="link" title="Our Science">Our Science</a>
                 </li>
                 <li class="list__item">
-                    <a href="#" class="link">Community</a>
+                    <a href="#" class="link" title="Community">Community</a>
                 </li>
             </ul>
 
@@ -129,21 +130,103 @@
                 </li>
             </ul>
         </nav>
+
         <div class="overlay">
             <div class="overlay__header">
-                <h1 class="header__logo logo--overlay">
+                <h1 class="header__logo overlay__logo">
                     <img src="src/images/logo.png" alt="SoundMind" title="SoundMind">
                 </h1>
 
-                <div class="hamburger hamburger--overlay">
-                    <button class="hamburger__button hamburger__button--overlay" onclick=toggleOverlay()>
-                        <span class="hamburger__close-button--left"></span>
-                        <span class="hamburger__close-button--right"></span>
+                <div class="hamburger overlay__close-button-wrapper">
+                    <button class="hamburger__button overlay__close-button" onclick=toggleOverlay()>
+                        <span class="overlay__close-button--left"></span>
+                        <span class="overlay__close-button--right"></span>
                     </button>
                 </div>
             </div>
-            <nav aria-label="smartphone navigation">
 
+            <nav aria-label="smartphone navigation">
+                <ul class="overlay__navigation">
+                    <li class="list__item overlay__navigation-item">
+                        <a href="#" class="link">About</a>
+                    </li>
+                    <div class="overlay__about-dropdown">
+                        <section class="hover-menu__section menu__section--row">
+                            <div class="hover-menu__image-container">
+                                <img src="./src/images/menu-platform-img.jpg" alt="" class="">
+                            </div>
+                            <div>
+                                <h2 class="menu__section-title">The SoundMind Platform</h2>
+                                <p class="menu__section-paragraph">Get an overview of the SoundMind<br>
+                                    platform-and see what the power of sound can
+                                    do for your piece of mind.</p>
+                                <a href="#" class="link">
+                                    LEARN MORE
+                                    <img src="./src/icons/arrow-icon-purple.svg" alt="" class="menu__arrow-link">
+                                </a>
+                            </div>
+                        </section>
+                        <section class="hover-menu__section">
+                            <div class="menu__middle-column">
+                                <h2 class="menu__section-title">
+                                    <a href="" class="link menu__section-title--link">
+                                        <img src="./src/icons/SM_School-Icon-new2.png" alt="">
+                                        SoundMind for Schools
+                                    </a>
+                                </h2>
+                                <p class="menu__section-paragraph">Use music as healing to prioritize the
+                                    wellness of your students and boost retention
+                                    rates</p>
+                            </div>
+
+                            <div class="menu__middle-column">
+                                <h2 class="menu__section-title">
+                                    <a href="" class="link menu__section-title--link">
+                                        <img src="./src/icons/ai-icon.svg" alt="">
+                                        AI Suggestions & Recs
+                                    </a>
+                                </h2>
+                                <p class="menu__section-paragraph">Integrate and expand SoundMind with our
+                                    growing apps</p>
+                            </div>
+
+                            <div class="menu__middle-column">
+                                <h2 class="menu__section-title">
+                                    <a href="" class="link menu__section-title--link">
+                                        <img src="./src/icons/integrations-icon.svg" alt="">
+                                        Integrations
+                                    </a>
+                                </h2>
+                                <p class="menu__section-paragraph">Integrate and expand SoundMind with our
+                                    growing apps</p>
+                            </div>
+                        </section>
+                        <section class="hover-menu__section">
+                            <h2 class="menu__section-title feature--title">Top Features</h2>
+                            <ul class="menu__section-feature">
+                                <li class="list__item feature--item"><a href="" class="link">Binaural Beats</a></li>
+                                <li class="list__item feature--item"><a href="" class="link">Soundscapes</a></li>
+                                <li class="list__item feature--item">
+                                    <a href="" class="link">
+                                        Hypnotherapy
+                                        <img src="./src/icons/new-card.svg" alt="" class="feature-new">
+                                    </a>
+                                </li>
+                                <li class="list__item feature--item"><a href="" class="link">Mood Tracker</a></li>
+                                <li class="list__item feature--item">
+                                    <a href="" class="link">
+                                        Brain Games
+                                        <img src="./src/icons/new-card.svg" alt="" class="feature-new">
+                                    </a>
+                                </li>
+                                <li class="list__item feature--item"><a href="" class="link">Journaling</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <li class="list__item overlay__navigation-item"><a href="#" class="link">Our Science</a></li>
+                    <li class="list__item overlay__navigation-item"><a href="#" class="link">Community</a></li>
+                    <li class="list__item overlay__navigation-item"><a href="#" class="link">For Students</a></li>
+                </ul>
             </nav>
         </div>
     </header>

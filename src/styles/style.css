@@ -5,7 +5,6 @@
     --overlay-color: #051439;
     --purple-light: #6f42c1;
     --nunito-default: 'Nunito', sans-serif;
-
 }
 
 body {
@@ -16,7 +15,11 @@ body {
     font-family: var(--nunito-default);
 }
 
-/* Links */
+/*====================================
+  ============== Links ===============
+  ====================================
+*/
+
 .link {
     color: white;
     text-decoration: none;
@@ -30,7 +33,10 @@ body {
     color: #e83e8c;
 }
 
-/* Generic Button */
+/*====================================
+  ========= Generic Button ===========
+  ====================================
+*/
 .button--generic {
     display: flex;
     align-items: center;
@@ -50,7 +56,6 @@ body {
     background-image: url('../icons/arrow-icon.svg');
     background-repeat: no-repeat;
     background-position: 91% 51%;
-
 }
 
 .button--generic:hover {
@@ -74,7 +79,11 @@ body {
     gap: 16px;
 }
 
-/* Page Header Base*/
+/*====================================
+  =========== Page Header ============
+  ====================================
+*/
+
 .header-wrapper {
     position: relative;
     display: flex;
@@ -94,10 +103,12 @@ body {
 
 .header__logo img {
     width: 100%;
-    image-rendering: optimizeQuality;
 }
 
-/* page header nav list */
+/*====================================
+  ====== Page Header Nav List ========
+  ====================================
+*/
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -134,7 +145,11 @@ body {
     gap: 40px;
 }
 
-/* Hover menu*/
+/*====================================
+  ========== Hover Menu ==============
+  ====================================
+*/
+
 .hover-menu {
     visibility: hidden;
     opacity: 0;
@@ -204,6 +219,7 @@ body {
 
 .feature--title {
     margin-bottom: 1.8rem;
+    font-weight: bold;
 }
 
 .feature--item {
@@ -214,7 +230,10 @@ body {
     margin-left: 0.5rem;
 }
 
-/*page header hamburger*/
+/*====================================
+  ====== Page Header Hamburguer ======
+  ====================================
+*/
 .hamburger__button {
     display: none;
     position: relative;
@@ -245,10 +264,14 @@ body {
     top: 22px;
 }
 
-/* Mobile Overlay Menu */
+/*====================================
+  ====== Mobile Overlay Menu =========
+  ====================================
+*/
 .overlay {
     display: none;
     position: fixed;
+    overflow-y: auto;
     top: 0;
     left: 100%;
     width: 100%;
@@ -259,31 +282,25 @@ body {
 }
 
 .overlay__header {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 30px;
     margin: 0;
 }
 
-.logo--overlay {
-    text-align: start;
+.overlay__logo img {
+    width: 220px;
 }
 
-.logo--overlay img {
-    width: 100%;
-}
-
-.hamburger--overlay {
+.overlay__close-button-wrapper {
     display: block;
 }
 
-.hamburger__button--overlay {
+.overlay__close-button {
     position: absolute;
     right: 33px;
     top: 24px;
 }
 
-.hamburger__button--overlay span:nth-child(1) {
+.overlay__close-button span:nth-child(1) {
     position: absolute;
     top: 50%;
     width: 85%;
@@ -291,12 +308,22 @@ body {
     height: 0;
 }
 
-.hamburger__button--overlay span:nth-child(2) {
+.overlay__close-button span:nth-child(2) {
     position: absolute;
     top: 50%;
     width: 85%;
     transform: rotate(0);
     height: 0;
+}
+
+.overlay__close-button--left.build {
+    transform: rotate(135deg) !important;
+    margin-top: 0px;
+}
+
+.overlay__close-button--right.build {
+    transform: rotate(225deg) !important;
+    margin-top: 0px;
 }
 
 .overlay--active {
@@ -304,7 +331,50 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-/* Page Header Medias*/
+.overlay__navigation {
+    padding: 4px 0;
+}
+
+.overlay__navigation-item {
+    border-bottom: 1px var(--background-default) solid;
+    padding: 12px 20px;
+}
+
+.overlay__about-dropdown {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    background: var(--background-default);
+    gap: 7rem;
+    padding: 20px;
+}
+
+.overlay__about-dropdown .hover-menu__image-container {
+    width: 100px;
+    min-width: 100px;
+}
+
+.overlay__about-dropdown .menu__section--row {
+    gap: 1rem;
+}
+
+.overlay__about-dropdown .menu__section-paragraph {
+    margin-bottom: 1rem;
+}
+
+.overlay__about-dropdown .feature--item,
+.overlay__about-dropdown .feature--title {
+    margin-bottom: 0.7rem;
+}
+
+.link .feature-new {
+    width: 40px;
+}
+
+/*====================================
+  ====== Page Header Medias ==========
+  ====================================
+*/
 
 @media (max-width: 1200px) {
 
@@ -359,22 +429,13 @@ body {
         margin: 0;
     }
 
-    .logo--overlay {
-        text-align: start;
-        width: 220px;
-    }
-
-    .logo--overlay img {
-        width: 100%;
-    }
-
-    .hamburger__button--overlay {
+    .overlay__close-button {
         position: absolute;
         right: 33px;
         top: 23px;
     }
 
-    .hamburger__close-button--left {
+    .overlay__close-button--left {
         position: absolute;
         width: 85%;
         height: 0;
@@ -382,7 +443,7 @@ body {
         margin-top: 30px;
     }
 
-    .hamburger__close-button--right {
+    .overlay__close-button--right {
         position: absolute;
         width: 85%;
         height: 0;
@@ -395,18 +456,20 @@ body {
         transition: 0.3s ease-in-out;
     }
 
-    .hamburger__close-button--left.build {
-        transform: rotate(135deg) !important;
-        margin-top: 0px;
-    }
-
-    .hamburger__close-button--right.build {
-        transform: rotate(225deg) !important;
-        margin-top: 0px;
-    }
-
     .list--right {
         gap: 20px;
+    }
+}
+
+@media(max-width: 1025px) {
+    .overlay__about-dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .overlay__about-dropdown .hover-menu__section {
+        border-bottom: 2px white solid;
     }
 }
 
@@ -433,7 +496,7 @@ body {
         gap: 10px;
     }
 
-    .hamburger__button--overlay {
+    .overlay__close-button {
         position: absolute;
         right: 20px;
         top: 20px;
@@ -462,7 +525,7 @@ body {
         display: none;
     }
 
-    .hamburger__button--overlay {
+    .overlay__close-button {
         position: absolute;
         right: 18px;
         top: 16px;
