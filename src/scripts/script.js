@@ -15,3 +15,13 @@ function toggleOverlay() {
     closeButtonLeft.classList.add('build')
     closeButtonRight.classList.add('build')
 }
+
+function toggleAbout() {
+    const aboutSection = document.querySelector('.overlay__about-dropdown')
+
+    if (aboutSection.classList.contains('active')) {
+        aboutSection.classList.remove('active')
+        return
+    }
+    aboutSection.classList.add('active')
+}
