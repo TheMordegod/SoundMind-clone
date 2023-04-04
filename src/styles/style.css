@@ -5,6 +5,8 @@
     --overlay-color: #051439;
     --purple-light: #6f42c1;
     --nunito-default: 'Nunito', sans-serif;
+    --pink: #e83e8c;
+    --pink-strong: #ED1D90;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 
 .link:hover {
     transition: 0.3s ease-in-out;
-    color: #e83e8c;
+    color: var(--pink);
 }
 
 /*====================================
@@ -568,4 +570,46 @@ body {
     .overlay__about-dropdown .menu__section--row {
         flex-wrap: wrap;
     }
+}
+
+/*====================================
+  ====== Apresentation Section =======
+  ====================================
+*/
+
+.apresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.apresentation__header {
+    width: 620px;
+}
+
+.apresentation__header-title {
+    position: relative;
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 62px;
+}
+
+.apresentation__header-title--spaced {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 100px;
+}
+
+.apresentation__header-title--pink {
+    color: var(--pink-strong);
+}
+
+.apresentation__header-title img {
+    width: 72px;
+    position: absolute;
+    right: 37px;
+    top: 0px;
 }
