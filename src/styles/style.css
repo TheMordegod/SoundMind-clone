@@ -345,8 +345,8 @@ body {
 }
 
 .overlay__navigation-item {
-    border-bottom: 1px #2a3489 solid;
-    padding: 12px 20px;
+    border-bottom: 1px rgba(106, 78, 225, 0.21) solid;
+    padding: 10px 20px;
 }
 
 .overlay__about-item {
