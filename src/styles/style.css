@@ -4,6 +4,7 @@
     --background-default: #200173;
     --overlay-color: #051439;
     --purple-light: #6f42c1;
+    --purplish-blue: #6B4EE2;
     --nunito-default: 'Nunito', sans-serif;
     --pink: #e83e8c;
     --pink-strong: #ED1D90;
@@ -36,7 +37,7 @@ body {
 }
 
 /*====================================
-  ========= Generic Button ===========
+  ============ Buttons ===============
   ====================================
 */
 .button--generic {
@@ -49,11 +50,10 @@ body {
     border: none;
     box-shadow: inset 4px 4px 12px #c2c2c2;
     color: var(--background-default);
-    width: 220px;
-    height: 58px;
+
     font-weight: 600;
     transition: 0.5s ease-in-out;
-    padding-left: 30px;
+    padding: 18px 60px 18px 30px;
 
     background-image: url('../icons/arrow-icon.svg');
     background-repeat: no-repeat;
@@ -76,10 +76,44 @@ body {
 
 .button--generic a {
     color: var(--background-default);
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 16px;
 }
+
+.button--reverse-colors {
+    background-color: var(--purplish-blue);
+    box-shadow: inset 4px 4px 12px #471b99;
+    background-image: url('../icons/btn-arrow-hover.svg');
+}
+
+.button--reverse-colors a {
+    color: white;
+}
+
+.button--reverse-colors:hover {
+    box-shadow: inset 4px 4px 12px #c2c2c2;
+    background: white;
+    background-image: url('../icons/arrow-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 91% 51%;
+}
+
+.button--reverse-colors:hover a {
+    color: white;
+    color: var(--purplish-blue);
+}
+
+.button--schools {
+    padding: 18px 55px 18px 20px;
+    position: relative;
+}
+
+.button--purplish:hover {
+    background-color: var(--purplish-blue);
+}
+
 
 /*====================================
   =========== Page Header ============
@@ -141,6 +175,8 @@ body {
     margin: 24px auto;
     opacity: 1;
     transition: 0.5s;
+    z-index: 1;
+    background-color: var(--background-default);
 }
 
 .list--right {
@@ -163,6 +199,7 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     gap: 6rem;
     padding: 3rem 3rem 1.5rem 3rem;
+
 }
 
 .hover-menu__trigger-area {
@@ -402,22 +439,93 @@ body {
 }
 
 /*====================================
-  ====== Page Header Medias ==========
+  ====== Apresentation Section =======
+  ====================================
+*/
+
+.apresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.apresentation__header {
+    width: 790px;
+}
+
+.apresentation__header-title {
+    position: relative;
+    color: white;
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 90px;
+}
+
+.apresentation__header-title--spaced {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 96px;
+}
+
+.apresentation__header-title--pink {
+    color: var(--pink-strong);
+    font-weight: 900;
+}
+
+.apresentation__header-title img {
+    width: 110px;
+    position: absolute;
+    right: -10px;
+    top: 5px;
+}
+
+.apresentation__try-it {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.apresentation__try-it-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 40px 0;
+}
+
+.button--schools::after {
+    content: url('../icons/btn-chat-icon.svg');
+    position: absolute;
+    top: -50px;
+    right: -10px;
+}
+
+/*====================================
+  ====== Apresentation Medias ========
+  ====================================
+*/
+
+/*====================================
+  ========== Media Query =============
   ====================================
 */
 
 @media (max-width: 1200px) {
 
     .button--generic {
-        width: 195px;
+        width: auto;
         height: 50px;
         font-size: 15px;
-        padding-left: 20px;
+        padding: 20px 50px 20px 20px;
 
         background-repeat: no-repeat;
         background-size: 22px;
     }
 
+    /*Header*/
     .header-wrapper {
         padding: 15px 30px;
         transition: 0.5s;
@@ -450,6 +558,7 @@ body {
         display: block;
     }
 
+    /*Overlay*/
     .overlay__header {
         position: relative;
         display: flex;
@@ -487,6 +596,26 @@ body {
     .list--right {
         gap: 20px;
     }
+
+    /*Apresentation*/
+    .apresentation__header {
+        width: 620px;
+    }
+
+    .apresentation__header-title {
+        font-size: 50px;
+        line-height: 62px;
+    }
+
+    .apresentation__header-title img {
+        width: 72px;
+        right: 37px;
+        top: 0px;
+    }
+
+    .apresentation__header-title--spaced {
+        padding-right: 100px;
+    }
 }
 
 @media(max-width: 1025px) {
@@ -510,8 +639,7 @@ body {
 @media (max-width: 770px) {
     .button--generic {
         width: 164px;
-        padding: 1px 30px 0 11px;
-        height: 47px;
+        padding: 0 30px 0 10px;
         font-size: 14px;
         background-size: 20px;
         background-position: 93% 50%;
@@ -548,13 +676,7 @@ body {
         gap: 0;
     }
 
-
     .button--generic {
-        width: 170px;
-        height: 50px;
-        padding: 0;
-
-        background-repeat: no-repeat;
         background-size: 10%;
     }
 
@@ -570,46 +692,4 @@ body {
     .overlay__about-dropdown .menu__section--row {
         flex-wrap: wrap;
     }
-}
-
-/*====================================
-  ====== Apresentation Section =======
-  ====================================
-*/
-
-.apresentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 75px;
-}
-
-.apresentation__header {
-    width: 620px;
-}
-
-.apresentation__header-title {
-    position: relative;
-    color: white;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 62px;
-}
-
-.apresentation__header-title--spaced {
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    padding-right: 100px;
-}
-
-.apresentation__header-title--pink {
-    color: var(--pink-strong);
-}
-
-.apresentation__header-title img {
-    width: 72px;
-    position: absolute;
-    right: 37px;
-    top: 0px;
 }
