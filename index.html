@@ -15,12 +15,14 @@
 </head>
 
 <body>
+    <!--HEADER-->
     <header class="header-wrapper">
         <a href="#" title="SoundMind">
             <h1 class="header__logo"><img src="src/images/logo.png" alt="SoundMind"></h1>
         </a>
 
         <nav class="header__nav" aria-label="widescreen navigation">
+            <!--LEFT PART OF NAVIGATION-->
             <ul class="header__list list--left wide-only">
                 <li class="list__item list__item--hover">
                     <a href="#" class="link" title="About">About</a>
@@ -108,7 +110,7 @@
                     <a href="#" class="link" title="Community">Community</a>
                 </li>
             </ul>
-
+            <!--RIGHT PART OF NAVIGATION-->
             <ul class="header__list list--right">
                 <li class="list__item wide-only">
                     <span>
@@ -234,25 +236,42 @@
         </div>
     </header>
     <main>
+        <!--PUT SOUND AT THE HEART OF YOUR MIND-->
         <section class="apresentation">
             <header class="apresentation__header">
                 <h2 class="apresentation__header-title">PUT <span class="apresentation__header-title--pink">SOUND</span>
-                    AT THE <img src="./src/images/banner-team-new-img1.png" alt="">
+                    AT THE
+                    <div class="apresentation__heart-container">
+                        <img src="./src/images/banner-team-new-img1.png" alt="heart"
+                            class="apresentation__header-heart">
+                        <img src="./src/images/banner-team-new-img2.png" alt="heart"
+                            class="apresentation__header-heart">
+                        <img src="./src/images/banner-team-new-img3.png" alt="heart"
+                            class="apresentation__header-heart">
+                    </div>
                     <span class="apresentation__header-title--spaced">OF YOUR MIND</span>
                 </h2>
-
+                <!--TRY IT OF FREE / FOR SCHOOLS-->
                 <div class="apresentation__try-it">
                     <div class="apresentation__try-it-buttons">
                         <button class="button--generic button--purplish" title="TRY IT FOR FREE!">
                             <a href="#">TRY IT FOR FREE!</a>
                         </button>
                         <button class="button--generic button--schools button--reverse-colors"
-                            title="TRY IT FOR SCHOOLS">
+                            title="Try it for schools!">
                             <a href="#">TRY IT FOR SCHOOLS!</a>
                         </button>
+                        <div class="apresentation__pop-up-text">
+                            <p>
+                                Empower your students through social emotional learning so that no one slips through the
+                                cracks of the system.
+                            </p>
+                            <img src="./src/icons/banner-btn-popup-icon.svg" alt="">
+                        </div>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250"
-                        height="54" viewBox="0 0 250 54" version="1.1">
+                    <svg class="product-hunt--top" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="54" viewBox="0 0 250 54"
+                        version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g transform="translate(-130.000000, -73.000000)">
                                 <g transform="translate(130.000000, 73.000000)">
@@ -304,6 +323,20 @@
                     </svg>
                 </div>
             </header>
+            <!--BIG SMARTPHONES-->
+            <div class="apresentation__smartphones">
+                <div class="smartphone-image--default">
+                    <img src="./src/images/banner-mob-img1.png" alt="">
+                </div>
+
+                <div class="smartphone-image--interative">
+                    <img src="./src/images/banner-mob-img2.svg" alt="">
+                </div>
+
+                <div class="smartphone-image--default">
+                    <img src="./src/images/banner-mob-img3-new.png" alt="">
+                </div>
+            </div>
         </section>
     </main>
     <script src="./src/scripts/script.js"></script>

@@ -1,5 +1,4 @@
 function toggleOverlay() {
-    //const button = document.querySelectorAll('hamburger__button')
     const overlayWindow = document.querySelector('.overlay')
     const closeButtonLeft = document.querySelector('.overlay__close-button--left')
     const closeButtonRight = document.querySelector('.overlay__close-button--right')
@@ -25,3 +24,24 @@ function toggleAbout() {
     }
     aboutSection.classList.add('active')
 }
+
+function changeHeart() {
+    const heartImages = document.querySelectorAll('.apresentation__header-heart')
+    heartImages[0].style.opacity = '1'
+    let currentImageIndex = 1
+
+    setInterval(() => {
+        if (heartImages[currentImageIndex - 1]) {
+            heartImages[currentImageIndex - 1].style.opacity = '0'
+        }
+
+        if (currentImageIndex > 2) {
+            currentImageIndex = 0
+        }
+
+        heartImages[currentImageIndex].style.opacity = '1'
+        currentImageIndex++
+    }, 2000)
+}
+
+changeHeart()
