@@ -528,10 +528,12 @@ body::-webkit-scrollbar {
     color: white;
     padding: 15px;
     border-radius: 6px;
-    right: -170px;
+    right: -160px;
     bottom: 90px;
     font-weight: 600;
     font-size: 14px;
+    display: none;
+    text-align: left;
 }
 
 .apresentation__pop-up-text img {
@@ -680,6 +682,13 @@ body::-webkit-scrollbar {
     .apresentation__try-it-buttons {
         margin: 30px 0;
     }
+
+    .apresentation__pop-up-text {
+        position: absolute;
+        width: 240px;
+        right: -185px;
+        bottom: 70px;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -721,6 +730,13 @@ body::-webkit-scrollbar {
         gap: 15px;
     }
 
+    .apresentation__pop-up-text {
+        position: absolute;
+        width: 240px;
+        right: -110px;
+        bottom: -30px;
+    }
+
     .apresentation__smartphones {
         margin-top: 0px;
         gap: 16px;
@@ -757,14 +773,14 @@ body::-webkit-scrollbar {
 
     .button--schools::after {
         top: -30px;
-        width: 40px;
+        width: 30px;
         height: 40px;
         background-size: 26px;
     }
 
     /*Header*/
     .header-wrapper {
-        padding: 16px;
+        padding: 12px 16px;
         transition: 0.5s;
     }
 
@@ -796,6 +812,11 @@ body::-webkit-scrollbar {
     .apresentation__heart-container img {
         width: 52px;
         right: 55px;
+    }
+
+    .apresentation__pop-up-text {
+        position: static;
+        width: 240px;
     }
 
     .product-hunt--top {
