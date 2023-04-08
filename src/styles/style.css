@@ -457,7 +457,6 @@ body::-webkit-scrollbar {
 
 .apresentation__header {
     width: 790px;
-    margin-bottom: 50px;
 }
 
 .apresentation__header-title {
@@ -548,10 +547,9 @@ body::-webkit-scrollbar {
 
 .apresentation__smartphones {
     display: flex;
-    margin-top: 75px;
-    align-items: center;
     gap: 75px;
     height: 500px;
+    padding-top: 75px;
 }
 
 .smartphone-image--default {
@@ -560,6 +558,7 @@ body::-webkit-scrollbar {
 
 .smartphone-image--default img {
     width: 100%;
+    margin-top: 50px;
 }
 
 .smartphone-image--interative {
@@ -692,6 +691,20 @@ body::-webkit-scrollbar {
         width: 240px;
         right: -185px;
         bottom: 70px;
+    }
+
+    .apresentation__smartphones {
+        padding-top: 45px;
+        gap: 45px;
+    }
+
+    .smartphone-image--default {
+        width: 190px;
+        margin-top: 40px;
+    }
+
+    .smartphone-image--interative {
+        width: 276px;
     }
 }
 
@@ -835,16 +848,15 @@ body::-webkit-scrollbar {
     }
 
     .apresentation__smartphones {
-        margin-top: 0px;
-        gap: 16px;
+        gap: 30px;
     }
 
     .smartphone-image--default {
-        width: 193px;
+        width: 140px;
     }
 
     .smartphone-image--interative {
-        width: 235px;
+        width: 210px;
     }
 }
 
