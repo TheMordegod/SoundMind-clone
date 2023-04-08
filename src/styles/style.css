@@ -548,17 +548,16 @@ body::-webkit-scrollbar {
 .apresentation__smartphones {
     display: flex;
     gap: 75px;
-    height: 500px;
     padding-top: 75px;
 }
 
 .smartphone-image--default {
     width: 236px;
+    margin: auto 0;
 }
 
 .smartphone-image--default img {
     width: 100%;
-    margin-top: 50px;
 }
 
 .smartphone-image--interative {
@@ -700,7 +699,6 @@ body::-webkit-scrollbar {
 
     .smartphone-image--default {
         width: 190px;
-        margin-top: 40px;
     }
 
     .smartphone-image--interative {
