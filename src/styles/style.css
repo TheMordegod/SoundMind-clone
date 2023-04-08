@@ -76,25 +76,13 @@ body::-webkit-scrollbar {
     background-image: url('../icons/btn-arrow-hover.svg');
 }
 
-.button--generic:hover a {
-    color: white;
-}
-
-.button--generic a {
-    color: var(--background-default);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .button--reverse-colors {
     background-color: var(--purplish-blue);
     box-shadow: inset 4px 4px 12px #471b99;
     background-image: url('../icons/btn-arrow-hover.svg');
 }
 
-.button--reverse-colors a {
+.button--reverse-colors {
     color: white;
 }
 
@@ -104,9 +92,7 @@ body::-webkit-scrollbar {
     background-image: url('../icons/arrow-icon.svg');
     background-repeat: no-repeat;
     background-position: 91% 51%;
-}
 
-.button--reverse-colors:hover a {
     color: white;
     color: var(--purplish-blue);
 }
@@ -472,6 +458,7 @@ body::-webkit-scrollbar {
     justify-content: end;
     width: 100%;
     padding-right: 96px;
+    font-style: normal;
 }
 
 .apresentation__header-title--pink {
@@ -790,7 +777,7 @@ body::-webkit-scrollbar {
         top: -30px;
         width: 30px;
         height: 40px;
-        background-size: 20px;
+        background-size: 26px;
     }
 
     /*Header*/
@@ -847,6 +834,7 @@ body::-webkit-scrollbar {
 
     .apresentation__smartphones {
         gap: 30px;
+        padding-top: 12px;
     }
 
     .smartphone-image--default {
@@ -859,6 +847,8 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 575px) {
+
+    /*Header*/
     .header-wrapper {
         justify-content: space-between;
         padding: 14px;
@@ -866,14 +856,11 @@ body::-webkit-scrollbar {
         gap: 0;
     }
 
-    .button--generic {
-        background-size: 10%;
-    }
-
     .header__button {
         display: none;
     }
 
+    /*overlay */
     .overlay__close-button {
         right: 18px;
         top: 16px;
@@ -881,5 +868,58 @@ body::-webkit-scrollbar {
 
     .overlay__about-dropdown .menu__section--row {
         flex-wrap: wrap;
+    }
+
+    /* apresentation */
+
+    .apresentation {
+        margin-top: 42px;
+    }
+
+    .apresentation__header {
+        width: 300px;
+    }
+
+    .apresentation__header-title {
+        width: 250px;
+        font-size: 32px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .apresentation__heart-container img {
+        right: 84px;
+        top: 41px;
+    }
+
+    .apresentation__header-title--spaced {
+        display: inline;
+        margin-left: 60px;
+        padding: 0;
+    }
+
+    .apresentation__try-it-buttons {
+        gap: 20px;
+    }
+
+    .apresentation__smartphones {
+        padding-top: 12px;
+        justify-content: space-between;
+        width: 95%;
+        gap: 8px;
+    }
+
+    .smartphone-image--default {
+        width: 76px;
+    }
+
+    .smartphone-image--interative {
+        width: 160px;
+    }
+}
+
+@media (max-width: 395px) {
+    .apresentation__try-it-buttons {
+        flex-direction: column;
     }
 }
