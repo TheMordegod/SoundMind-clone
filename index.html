@@ -375,8 +375,40 @@
                                 <button class="phone-screen__play-button">PLAY ME</button>
                             </li>
                         </ul>
-                        <video class="phone-screen__video" preload="none" loop>
-                        </video>
+                        <div aria-hidden="true">
+                            <video class="phone-screen__video" preload="none" autoplay playsinline loop muted>
+                                <source
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/alert-and-calm/alert-and-calm.mp4"
+                                    type="video/mp4">
+                                <audio
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/alert-and-calm/alert-and-calm.wav"
+                                    class="audio" type="audio/wav"></audio>
+                            </video>
+                            <video class="phone-screen__video" preload="none" loop autoplay playsinline muted>
+                                <source
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/balance/balance.mp4"
+                                    type="video/mp4">
+                                <audio class="audio"
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/balance/balance.wav"
+                                    type="audio/wav"></audio>
+                            </video>
+                            <video class="phone-screen__video" preload="none" loop autoplay playsinline muted>
+                                <source
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/brain-power/brain-power.mp4"
+                                    type="video/mp4">
+                                <audio class="audio"
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/brain-power/brain-power.mp3"
+                                    type="audio/mp3"></audio>
+                            </video>
+                            <video class="phone-screen__video" preload="none" loop autoplay playsinline muted>
+                                <source
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/deep-sleep/deep-sleep.mp4"
+                                    type="video/mp4">
+                                <audio class="audio"
+                                    src="https://www.soundmind.app/wp-content/themes/soundmind/assets/video/deep-sleep/deep-sleep.wav"
+                                    type="audio/wav"></audio>
+                            </video>
+                        </div>
                         <button class="phone-screen__close-button">
                             <span>x</span>
                         </button>
