@@ -46,26 +46,26 @@ function changeHeart() {
 
 function showVideo() {
     const closeVideoBtn = document.querySelector('.phone-screen__close-button')
-    const videoScreen = document.querySelectorAll('.phone-screen__video')
-    const songs = document.querySelectorAll('.phone-screen__song')
-    const audios = document.querySelectorAll('.audio')
+    const videoElement = document.querySelectorAll('.phone-screen__video')
+    const songElementList = document.querySelectorAll('.phone-screen__song')
+    const audioList = document.querySelectorAll('.audio')
 
-    songs.forEach((song, soundIndex) => {
+    songElementList.forEach((song, soundIndex) => {
         song.addEventListener('click', () => {
             closeVideoBtn.classList.add('phone-screen__video--active')
-            videoScreen[soundIndex].classList.add('phone-screen__video--active')
-            audios[soundIndex].play()
-            videoScreen[soundIndex].play()
+            videoElement[soundIndex].classList.add('phone-screen__video--active')
+            audioList[soundIndex].play()
+            videoElement[soundIndex].play()
             closeVideoBtn.focus()
         })
     })
 
     closeVideoBtn.addEventListener('click', () => {
         closeVideoBtn.classList.remove('phone-screen__video--active')
-        songs.forEach((song, soundIndex) => {
-            videoScreen[soundIndex].classList.remove('phone-screen__video--active')
-            audios[soundIndex].pause()
-            videoScreen[soundIndex].pause()
+        songElementList.forEach((song, soundIndex) => {
+            videoElement[soundIndex].classList.remove('phone-screen__video--active')
+            audioList[soundIndex].pause()
+            videoElement[soundIndex].pause()
         })
     })
 }
