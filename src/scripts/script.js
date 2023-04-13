@@ -1,29 +1,4 @@
-function toggleOverlay() {
-    const overlayWindow = document.querySelector('.overlay')
-    const closeButtonLeft = document.querySelector('.overlay__close-button--left')
-    const closeButtonRight = document.querySelector('.overlay__close-button--right')
-
-    if (overlayWindow.classList.contains('overlay--active')) {
-        overlayWindow.classList.remove('overlay--active')
-        closeButtonLeft.classList.remove('build')
-        closeButtonRight.classList.remove('build')
-        return
-    }
-
-    overlayWindow.classList.add('overlay--active')
-    closeButtonLeft.classList.add('build')
-    closeButtonRight.classList.add('build')
-}
-
-function toggleAbout() {
-    const aboutSection = document.querySelector('.overlay__about-dropdown')
-
-    if (aboutSection.classList.contains('active')) {
-        aboutSection.classList.remove('active')
-        return
-    }
-    aboutSection.classList.add('active')
-}
+import { MobileOverlay } from './mobileOverlay.js'
 
 function changeHeart() {
     const heartImages = document.querySelectorAll('.apresentation__header-heart')
@@ -69,6 +44,16 @@ function showVideo() {
         })
     })
 }
+
+const mobileOverlay = new MobileOverlay()
+const toggleMobileOverlayButton = document.querySelectorAll('.hamburger__button')
+const aboutButton = document.querySelector('.overlay__about-button')
+
+toggleMobileOverlayButton.forEach((button) => {
+    button.addEventListener('click', mobileOverlay.toggleOverlay.bind(mobileOverlay))
+})
+
+aboutButton.addEventListener('click', mobileOverlay.toggleAbout.bind(mobileOverlay))
 
 /*Load functions into page*/
 showVideo()
