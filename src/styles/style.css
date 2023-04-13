@@ -329,11 +329,8 @@ body::-webkit-scrollbar {
     width: 220px;
 }
 
-.overlay__close-button-wrapper {
-    display: block;
-}
-
 .overlay__close-button {
+    display: block;
     position: absolute;
     right: 33px;
     top: 24px;
@@ -405,7 +402,7 @@ body::-webkit-scrollbar {
     padding: 20px;
 }
 
-.overlay__about-dropdown.active {
+.overlay__about-dropdown.overlay__about-dropdown--active {
     display: grid;
 }
 
@@ -868,7 +865,7 @@ body::-webkit-scrollbar {
 @media(max-width: 1024px) {
 
     /*header overlay*/
-    .overlay__about-dropdown.active {
+    .overlay__about-dropdown.overlay__about-dropdown--active {
         display: flex;
         flex-direction: column;
         gap: 1rem;

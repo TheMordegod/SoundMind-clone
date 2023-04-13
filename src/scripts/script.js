@@ -1,4 +1,22 @@
-import { MobileOverlay } from './mobileOverlay.js'
+import { ElementToggler } from './toggleElement.js'
+
+/*Overlay Functions*/
+const openOverlay = new ElementToggler('overlay--active')
+const closeOverlayButtonAnimation = new ElementToggler('build')
+const aboutOverlay = new ElementToggler('overlay__about-dropdown--active')
+
+document.querySelectorAll('.hamburger__button').forEach((button) => {
+    button.addEventListener('click', () => {
+        openOverlay.toggleElement('overlay')
+        closeOverlayButtonAnimation.toggleElement('overlay__close-button--left')
+        closeOverlayButtonAnimation.toggleElement('overlay__close-button--right')
+    })
+})
+
+document.querySelector('.overlay__about-button').addEventListener('click', () => {
+    aboutOverlay.toggleElement('overlay__about-dropdown')
+})
+/*End of Overlay Functions*/
 
 function changeHeart() {
     const heartImages = document.querySelectorAll('.apresentation__header-heart')
@@ -45,16 +63,8 @@ function showVideo() {
     })
 }
 
-const mobileOverlay = new MobileOverlay()
-const toggleMobileOverlayButton = document.querySelectorAll('.hamburger__button')
-const aboutButton = document.querySelector('.overlay__about-button')
-
-toggleMobileOverlayButton.forEach((button) => {
-    button.addEventListener('click', mobileOverlay.toggleOverlay.bind(mobileOverlay))
-})
-
-aboutButton.addEventListener('click', mobileOverlay.toggleAbout.bind(mobileOverlay))
 
 /*Load functions into page*/
 showVideo()
 changeHeart()
+
