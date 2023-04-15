@@ -10,6 +10,7 @@
     --pink: #e83e8c;
     --pink-strong: #ED1D90;
     --blue-light: #0f8bc5;
+    --text-blue: #1DCBFF;
 }
 
 body {
@@ -24,6 +25,17 @@ body::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/*====================================
+  ============== Texts ===============
+  ====================================
+*/
+.text--large {
+    color: white;
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 85px;
 }
 
 /*====================================
@@ -446,10 +458,7 @@ body::-webkit-scrollbar {
 
 .apresentation__header-title {
     position: relative;
-    color: white;
-    font-size: 66px;
-    font-weight: 800;
-    line-height: 85px;
+
 }
 
 .apresentation__header-title--spaced {
@@ -697,12 +706,38 @@ body::-webkit-scrollbar {
 }
 
 /*====================================
+  ======= Apresentation Therapy ======
+  ====================================
+*/
+.music-therapy {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    padding-top: 40px;
+    padding-inline: 6px;
+    line-height: 45px;
+}
+
+.music-therapy__text--blue {
+    color: #1DCBFF;
+    font-weight: bold;
+}
+
+
+/*====================================
   ========== Media Query =============
   ====================================
 */
 
 @media (max-width: 1200px) {
 
+    /*Text*/
+    .text--large {
+        font-size: 50px;
+        line-height: 62px;
+    }
+
+    /*Buttons*/
     .button--generic {
         width: auto;
         height: 50px;
@@ -801,11 +836,6 @@ body::-webkit-scrollbar {
         width: 620px;
     }
 
-    .apresentation__header-title {
-        font-size: 50px;
-        line-height: 62px;
-    }
-
     .apresentation__header-title img {
         width: 72px;
         right: 37px;
@@ -860,9 +890,20 @@ body::-webkit-scrollbar {
         font-size: 7px;
         padding: 6px 8px;
     }
+
+    /*Music therapy*/
+    .music-therapy {
+        font-size: 24px;
+    }
 }
 
 @media(max-width: 1024px) {
+
+    /*Text*/
+    .text--large {
+        font-size: 42px;
+        line-height: 54px;
+    }
 
     /*header overlay*/
     .overlay__about-dropdown.overlay__about-dropdown--active {
@@ -884,11 +925,6 @@ body::-webkit-scrollbar {
     /*Apresentation Section*/
     .apresentation__header {
         width: 536px;
-    }
-
-    .apresentation__header-title {
-        font-size: 42px;
-        line-height: 54px;
     }
 
     .apresentation__heart-container img {
@@ -933,9 +969,21 @@ body::-webkit-scrollbar {
         padding-right: 0px;
         padding-left: 5px;
     }
+
+    /*Music therapy*/
+    .music-therapy {
+        font-size: 22px;
+        line-height: 38px;
+    }
 }
 
 @media (max-width: 770px) {
+
+    /*Text*/
+    .text--large {
+        font-size: 35px;
+        line-height: 43px;
+    }
 
     /*Buttons*/
     .button--generic {
@@ -985,11 +1033,6 @@ body::-webkit-scrollbar {
     .apresentation__header {
         width: 470px;
         margin-bottom: 0;
-    }
-
-    .apresentation__header-title {
-        font-size: 35px;
-        line-height: 43px;
     }
 
     .apresentation__heart-container img {
@@ -1130,6 +1173,12 @@ body::-webkit-scrollbar {
         top: 10%;
         font-size: 6px;
         padding: 3px 4px;
+    }
+
+    /*Music therapy*/
+    .music-therapy {
+        font-size: 20px;
+        line-height: 31px;
     }
 }
 
