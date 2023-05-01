@@ -28,15 +28,74 @@ body::-webkit-scrollbar {
 }
 
 /*====================================
+  ======== PageIntersection ==========
+  ====================================
+*/
+.iov-animate {
+    opacity: 1 !important;
+    transition: 2s !important;
+    transform: translateY(0px) !important;
+}
+
+.ioh-animate {
+    transition: 2s !important;
+    opacity: 1 !important;
+}
+
+.ioh-animate:nth-child(1) {
+    transform: translate(0, 0) !important;
+}
+
+.ioh-animate:nth-child(2) {
+    transform: translate(0, 0) !important;
+}
+
+/*====================================
   ============== Texts ===============
   ====================================
 */
-.text--large {
+.text--very-large {
     color: white;
     font-size: 66px;
     font-weight: 800;
     line-height: 85px;
 }
+
+.text--large {
+    font-size: 40px;
+    color: white;
+}
+
+.text--medium {
+    font-size: 26px;
+    color: white;
+}
+
+.text--normal {
+    font-size: 22px;
+    color: white;
+}
+
+.text--small {
+    font-size: 16px;
+    color: white;
+}
+
+.text--extra-small {
+    font-size: 16px;
+    color: white;
+}
+
+.text--pink-strong {
+    color: var(--pink-strong);
+    font-weight: 900;
+}
+
+.text--blue {
+    color: #1DCBFF;
+    font-weight: bold;
+}
+
 
 /*====================================
   ============== Links ===============
@@ -120,6 +179,26 @@ body::-webkit-scrollbar {
     background-color: var(--purplish-blue);
 }
 
+.journey-btn {
+    display: flex;
+    align-items: center;
+    border: white 1px solid;
+    border-radius: 30px;
+    padding: 12px 1rem;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    gap: 0.5rem;
+}
+
+.journey-btn img {
+    width: 10%;
+}
+
+.journey-btn:hover {
+    background: #8ed1fc;
+    outline: #8ed2fc60 4px solid;
+}
 
 /*====================================
   =========== Page Header ============
@@ -469,11 +548,6 @@ body::-webkit-scrollbar {
     font-style: normal;
 }
 
-.apresentation__header-title--pink {
-    color: var(--pink-strong);
-    font-weight: 900;
-}
-
 .apresentation__heart-container img {
     display: flex;
     width: 110px;
@@ -544,6 +618,9 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 75px;
     padding-top: 75px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 2s;
 }
 
 .smartphone-image--default {
@@ -711,18 +788,48 @@ body::-webkit-scrollbar {
 */
 .music-therapy {
     text-align: center;
-    font-size: 26px;
     color: white;
     padding-top: 40px;
     padding-inline: 6px;
     line-height: 45px;
+    transform: translateY(75px);
+    opacity: 0;
 }
 
-.music-therapy__text--blue {
-    color: #1DCBFF;
-    font-weight: bold;
+/*====================================
+  ============ Journey ===============
+  ====================================
+*/
+.journey {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
 }
 
+.journey--left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: 2s;
+}
+
+.journey--right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: translate(100px, 0);
+    opacity: 0;
+    transition: 2s;
+}
+
+.journey__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
 /*====================================
   ========== Media Query =============
@@ -732,9 +839,21 @@ body::-webkit-scrollbar {
 @media (max-width: 1200px) {
 
     /*Text*/
-    .text--large {
+    .text--very-large {
         font-size: 50px;
         line-height: 62px;
+    }
+
+    .text--large {
+        font-size: 30px;
+    }
+
+    .text--medium {
+        font-size: 24px;
+    }
+
+    .text--normal {
+        font-size: 18px;
     }
 
     /*Buttons*/
@@ -750,6 +869,10 @@ body::-webkit-scrollbar {
 
     .button--schools:hover {
         background-size: 22px;
+    }
+
+    .journey-btn {
+        font-size: 14px;
     }
 
     /*====================================
@@ -891,19 +1014,25 @@ body::-webkit-scrollbar {
         padding: 6px 8px;
     }
 
-    /*Music therapy*/
-    .music-therapy {
-        font-size: 24px;
+    /*journey*/
+    .journey {
+        grid-template-columns: 1fr 1.5fr;
+        width: 95%;
     }
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1025px) {
 
     /*Text*/
-    .text--large {
+    .text--very-large {
         font-size: 42px;
         line-height: 54px;
     }
+
+    .text--medium {
+        font-size: 22px;
+    }
+
 
     /*header overlay*/
     .overlay__about-dropdown.overlay__about-dropdown--active {
@@ -970,20 +1099,32 @@ body::-webkit-scrollbar {
         padding-left: 5px;
     }
 
-    /*Music therapy*/
-    .music-therapy {
-        font-size: 22px;
-        line-height: 38px;
+    /*journey*/
+
+    .journey {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
+
+    .journey br {
+        display: none;
+    }
+
 }
 
 @media (max-width: 770px) {
 
     /*Text*/
-    .text--large {
+    .text--very-large {
         font-size: 35px;
         line-height: 43px;
     }
+
+    .text--medium {
+        font-size: 20px;
+    }
+
 
     /*Buttons*/
     .button--generic {
@@ -1085,6 +1226,17 @@ body::-webkit-scrollbar {
 
 @media (max-width: 575px) {
 
+    /*Buttons*/
+    .journey-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .journey-btn img {
+        width: 12%;
+    }
+
     /*Header*/
     .header-wrapper {
         justify-content: space-between;
@@ -1177,7 +1329,6 @@ body::-webkit-scrollbar {
 
     /*Music therapy*/
     .music-therapy {
-        font-size: 20px;
         line-height: 31px;
     }
 }

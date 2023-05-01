@@ -64,7 +64,34 @@ function showVideo() {
 }
 
 
+//intersection Observers
+function verticalObserverAnim() {
+    const verticalContainer = document.querySelectorAll('.iov')
+    const horizontalContainer = document.querySelectorAll('.ioh')
+
+    const verticalObserver = new IntersectionObserver(entries => {
+        entries.forEach(element => {
+            element.target.classList.toggle('iov-animate', element.isIntersecting);
+            //   if (entry.isIntersecting) observer.unobserve(entry.target)
+        })
+    }, { threshold: 0.25 })
+
+    const horizontalObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('ioh-animate', entry.isIntersecting);
+        });
+    }, { threshold: 0.1 })
+
+    verticalContainer.forEach(entry => {
+        verticalObserver.observe(entry)
+    })
+
+    horizontalContainer.forEach(entry => {
+        horizontalObserver.observe(entry)
+    })
+}
+
 /*Load functions into page*/
 showVideo()
 changeHeart()
-
+verticalObserverAnim()
