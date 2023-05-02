@@ -56,9 +56,9 @@ body::-webkit-scrollbar {
 */
 .text--very-large {
     color: white;
-    font-size: 66px;
+    font-size: 63px;
     font-weight: 800;
-    line-height: 85px;
+    line-height: 75px;
 }
 
 .text--large {
@@ -94,6 +94,10 @@ body::-webkit-scrollbar {
 .text--blue {
     color: #1DCBFF;
     font-weight: bold;
+}
+
+.text--strong {
+    font-weight: 900;
 }
 
 
@@ -193,6 +197,7 @@ body::-webkit-scrollbar {
 
 .journey-btn img {
     width: 10%;
+    min-width: 30px;
 }
 
 .journey-btn:hover {
@@ -801,7 +806,7 @@ body::-webkit-scrollbar {
   ====================================
 */
 .journey {
-    margin: 5rem auto;
+    margin: 5rem auto 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 85%;
@@ -832,6 +837,35 @@ body::-webkit-scrollbar {
 }
 
 /*====================================
+  ======= Problem section ============
+  ====================================
+*/
+.problems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.problems__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: 25%;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.problem__video-container video {
+    width: 80%;
+    mix-blend-mode: lighten;
+    margin-top: -5%;
+    pointer-events: none;
+}
+
+
+/*====================================
   ========== Media Query =============
   ====================================
 */
@@ -841,7 +875,7 @@ body::-webkit-scrollbar {
     /*Text*/
     .text--very-large {
         font-size: 50px;
-        line-height: 62px;
+        line-height: 56px;
     }
 
     .text--large {
@@ -872,7 +906,7 @@ body::-webkit-scrollbar {
     }
 
     .journey-btn {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     /*====================================
@@ -1111,6 +1145,11 @@ body::-webkit-scrollbar {
         display: none;
     }
 
+    /*problems*/
+    .problems__header {
+        padding-inline: 5%;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -1226,11 +1265,17 @@ body::-webkit-scrollbar {
 
 @media (max-width: 575px) {
 
+    /*text*/
+    .text--very-large {
+        font-size: 32px;
+    }
+
     /*Buttons*/
     .journey-btn {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 15px;
     }
 
     .journey-btn img {
@@ -1271,7 +1316,6 @@ body::-webkit-scrollbar {
 
     .apresentation__header-title {
         width: 250px;
-        font-size: 32px;
         margin: auto;
         text-align: center;
     }
