@@ -65,22 +65,21 @@ function showVideo() {
 
 
 //intersection Observers
-function verticalObserverAnim() {
+function intersectionObserverAnim() {
     const verticalContainer = document.querySelectorAll('.iov')
     const horizontalContainer = document.querySelectorAll('.ioh')
 
     const verticalObserver = new IntersectionObserver(entries => {
-        entries.forEach(element => {
-            element.target.classList.toggle('iov-animate', element.isIntersecting);
-            //   if (entry.isIntersecting) observer.unobserve(entry.target)
+        entries.forEach(entry => {
+            entry.target.classList.toggle('iov-animate', entry.isIntersecting);
         })
-    }, { threshold: 0.25 })
+    }, { threshold: 0.25, rootMargin: '100% 0px 0px 0px' })
 
     const horizontalObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             entry.target.classList.toggle('ioh-animate', entry.isIntersecting);
         });
-    }, { threshold: 0.1 })
+    }, { threshold: 0.1, rootMargin: '100% 0px 0px 0px' })
 
     verticalContainer.forEach(entry => {
         verticalObserver.observe(entry)
@@ -94,4 +93,4 @@ function verticalObserverAnim() {
 /*Load functions into page*/
 showVideo()
 changeHeart()
-verticalObserverAnim()
+intersectionObserverAnim()
