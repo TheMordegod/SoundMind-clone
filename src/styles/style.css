@@ -911,13 +911,22 @@ body::-webkit-scrollbar {
     font-weight: bold;
     list-style: none;
     padding: 0.9rem 1.5rem;
+    cursor: pointer;
+}
+
+.robust-features__list__item__blue-block {
+    width: 0;
 }
 
 .robust-features__container {
-    display: grid;
+    display: none;
     align-content: center;
     grid-template-columns: 1fr 1fr;
     padding: 3rem 0 28px 0;
+}
+
+.robust-features__container--active {
+    display: grid;
 }
 
 .robust-features__container__features {

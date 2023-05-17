@@ -90,7 +90,27 @@ function intersectionObserverAnim() {
     })
 }
 
+
+//Robust section selector
+function robustFeaturesSelector() {
+    const navElements = document.querySelectorAll('.robust-features__list__item')
+    const navBlueBlocks = document.querySelectorAll('.robust-features__list__item__blue-block')
+    const featureSection = document.querySelectorAll('.robust-features__container')
+    const showSection = new ElementToggler('robust-features__container--active')
+
+    navElements.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            document.querySelectorAll('.robust-features__container--active').forEach(node => {
+                node.classList.remove('robust-features__container--active')
+            })
+
+            featureSection[index].classList.add('robust-features__container--active')
+        })
+    })
+}
+
 /*Load functions into page*/
 showVideo()
 changeHeart()
 intersectionObserverAnim()
+robustFeaturesSelector()
