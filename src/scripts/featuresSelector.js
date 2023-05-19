@@ -6,7 +6,7 @@ export function robustFeaturesSelector() {
 
     //adds event listener to every feature
     navElements.forEach((element, index) => {
-        element.addEventListener('click', () => {
+        element.addEventListener('click', (e) => {
             //removes all classes
             document.querySelectorAll('.robust-features__container--active').forEach(node => {
                 node.classList.remove('robust-features__container--active')
@@ -16,7 +16,7 @@ export function robustFeaturesSelector() {
                 node.classList.remove('blue-active')
             })
 
-            //add to user selected item
+            //activate class to user selected item
             navBlueBlocks[index].classList.add('blue-active')
             featureSection[index].classList.add('robust-features__container--active')
         })

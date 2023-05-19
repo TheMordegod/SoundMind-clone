@@ -8,7 +8,7 @@ export function intersectionObserverAnim() {
         entries.forEach(entry => {
             entry.target.classList.toggle('iov-animate', entry.isIntersecting);
         })
-    }, { threshold: 0.25, rootMargin: '99999px 0px 0px 0px' })
+    }, { threshold: 0.20, rootMargin: '99999px 0px 0px 0px' })
 
     //observer for horizontal type of animations
     const horizontalObserver = new IntersectionObserver(entries => {
