@@ -899,9 +899,11 @@ body::-webkit-scrollbar {
     margin-bottom: 75px;
     text-align: center;
     transform: translateY(75px);
+    opacity: 0;
 }
 
 .robust-features__body {
+    opacity: 0;
     transform: translateY(75px);
 }
 
@@ -1342,6 +1344,10 @@ body::-webkit-scrollbar {
         transition: 0.5ms;
         cursor: pointer;
         overflow: hidden;
+    }
+
+    .robust-features__mobile__list__item:last-child {
+        border-radius: 0 0 8px 8px;
     }
 
     .robust-features__mobile__list__item--active {
