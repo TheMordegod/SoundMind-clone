@@ -1,4 +1,4 @@
-import { robustFeaturesSelector } from './featuresSelector.js'
+import { robustFeaturesSelector, robustFeaturesSelectorMobile } from './featuresSelector.js'
 import { heartLoop } from './heartLoop.js'
 import { phoneVideoShowcase } from './phoneVideoShowcase.js'
 import { intersectionObserverAnim } from './pageIntersectionObservers.js'
@@ -9,4 +9,5 @@ phoneVideoShowcase()
 heartLoop()
 intersectionObserverAnim()
 robustFeaturesSelector()
+robustFeaturesSelectorMobile()
 mobileOverlay()

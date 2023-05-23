@@ -1314,13 +1314,23 @@ body::-webkit-scrollbar {
         padding: 1rem;
         border-radius: 4px 4px 0 0;
         font-weight: bold;
+        cursor: pointer;
     }
 
     .robust-features__mobile__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.7s;
+    }
+
+    .robust-features__mobile__list>ul {
+        overflow: hidden;
         padding: 0;
+    }
+
+    .robust-features__mobile__list--open {
+        grid-template-rows: 1fr;
+        transition: 0.7s;
     }
 
     .robust-features__mobile__list__item {
@@ -1330,6 +1340,12 @@ body::-webkit-scrollbar {
         padding: 0.9rem;
         font-weight: bold;
         transition: 0.5ms;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .robust-features__mobile__list__item--active {
+        display: none;
     }
 
     .robust-features__container {
