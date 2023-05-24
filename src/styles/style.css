@@ -3,6 +3,7 @@
     box-sizing: border-box;
     --nunito-default: 'Nunito', sans-serif;
     --Jost-font: 'Jost', sans-serif;
+    --Mulito-font: 'Mulish', sans-serif;
     --background-default: #200173;
     --overlay-color: #051439;
     --purple-light: #6f42c1;
@@ -967,11 +968,67 @@ body::-webkit-scrollbar {
 }
 
 .robust-features__container__features__content-title {
-    display: flex;
     gap: 0.6rem;
-    align-items: center;
     margin-bottom: 0.5rem;
     font-weight: bolder;
+}
+
+.robust-features__container__features__content-title__popup-trigger {
+    position: relative;
+}
+
+.features__content-title__popup {
+    display: none;
+    min-width: 257px;
+    width: 280px;
+    padding: 19px 15px 19px 18px;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 50px;
+    right: -50px;
+    color: var(--background-default);
+    border-radius: 6px;
+    font-family: var(--Mulito-font);
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.features__content-title__popup img {
+    position: absolute;
+    right: 1rem;
+    top: 12px;
+}
+
+.features__content-title__popup:first-of-type p {
+    margin: 1rem 0;
+}
+
+.robust-features__container__features__content-title__popup-trigger:hover .features__content-title__popup {
+    display: block;
+}
+
+.robust-features__container__features__content-title__popup-trigger a {
+    transition: 0.7s;
+    color: white;
+    text-decoration: none;
+}
+
+.robust-features__container__features__content-title__popup-trigger a:hover {
+    transition: 0.7s;
+    color: var(--text-blue);
+    cursor: pointer;
+}
+
+.robust-features__container__features__content-title__popup-trigger a::after {
+    content: "";
+    background-image: url('../icons/icons-squiggly-line.png');
+    height: 7px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    background-repeat: repeat;
 }
 
 .robust-features__container__image-wrapper {
@@ -1393,6 +1450,9 @@ body::-webkit-scrollbar {
         font-size: 20px;
     }
 
+    .text--extra-small {
+        font-size: 15px;
+    }
 
     /*Buttons*/
     .button--generic {
